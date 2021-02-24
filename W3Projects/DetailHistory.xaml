@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="W3Projects.DetailHistory">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <StackLayout Orientation="Vertical" RelativeLayout.XConstraint="{
+            ConstraintExpression Type=RelativeToParent,
+            ElementName=banner,
+            Property=Width,
+            Factor=0.2
+          }"
+          RelativeLayout.YConstraint="{
+                ConstraintExpression Type=RelativeToParent,
+                ElementName=banner,
+                Property=Height,
+                Factor=0.25
+          }" >
+                <Label Text="" Padding="10" TextColor="White" BackgroundColor="Red" x:Name="itemName"/>
+                <Label Text="" Padding="10" TextColor="White" BackgroundColor="Red" x:Name="itemQuantity"/>
+                <Label Text="" Padding="10" TextColor="White" BackgroundColor="Red" x:Name="itemPurchased"/>
+                <Label Text="" Padding="10" TextColor="White" BackgroundColor="Red" x:Name="totalAmount"/>
+
+
+            </StackLayout>
+        </RelativeLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

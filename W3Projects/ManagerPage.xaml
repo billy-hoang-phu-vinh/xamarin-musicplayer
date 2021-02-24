@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="W3Projects.ManagerPage">
+
+    <RelativeLayout>
+      
+        <StackLayout Orientation="Vertical" RelativeLayout.XConstraint="{
+            ConstraintExpression Type=RelativeToParent,
+            ElementName=banner,
+            Property=Width,
+            Factor=0.4
+          }"
+          RelativeLayout.YConstraint="{
+                ConstraintExpression Type=RelativeToParent,
+                ElementName=banner,
+                Property=Height,
+                Factor=0.45
+          }" >
+            <Button Text="History" TextColor="White" BackgroundColor="Red" BorderRadius="10" Clicked="Button_Clicked_1"/>
+            <Button Text="Restock" TextColor="White" BackgroundColor="Red" BorderRadius="10" Clicked="Button_Clicked"/>
+
+        </StackLayout>
+
+    </RelativeLayout>
+</ContentPage>

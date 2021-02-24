@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="W3Projects.History">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ListView x:Name="mylist" HasUnevenRows="True"
+              ItemSelected="mylist_ItemSelected"
+              RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Height, Factor=0.1
+                }"
+                      RelativeLayout.XConstraint="10"
+                      RelativeLayout.WidthConstraint="300"
+
+              >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}"
+                           Detail="{Binding quantity}"
+                           TextColor="Black"
+                           DetailColor="Red"
+                           >
+
+
+                        </TextCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+        </RelativeLayout>
+
+    </ContentPage.Content>
+</ContentPage>

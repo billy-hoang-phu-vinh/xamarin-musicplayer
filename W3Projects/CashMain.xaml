@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="W3Projects.CashMain"
+             Padding="0,20,0,0"
+             >
+    <StackLayout Orientation="Vertical">
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Grid Padding="3"
+                RowSpacing="4"
+                ColumnSpacing="4"
+                VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="Type: " Padding="7" BackgroundColor="#3478c9" HorizontalOptions="Center" TextColor="White"/>
+                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Text="" Padding="7" BackgroundColor="#3478c9" HorizontalOptions="Center" TextColor="White" x:Name="type"/>
+                <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Text="MANAGER" Padding="7" BackgroundColor="Red" HorizontalOptions="Center" TextColor="White" Clicked="to_Manager" />
+                <Button Grid.Row="1" Grid.Column="0" Text="1"  BackgroundColor="#3478c9" TextColor="White" BorderRadius="10" FontSize="Medium" Clicked="Quantity"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="2"  BackgroundColor="#3478c9" TextColor="White" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="3" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="2" Grid.Column="0" Text="4" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="5" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="2" Grid.Column="2" Text="6" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="3" Grid.Column="0" Text="7" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="8" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="3" Grid.Column="2" Text="9" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="4" Grid.Column="1" Text="0" TextColor="White" BackgroundColor="#3478c9" BorderRadius="10" Clicked="Quantity"/>
+                <Button Grid.Row="4" Grid.Column="2" Text="Clear" FontSize="10" TextColor="DarkRed" BackgroundColor="#fff" BorderRadius="10" Clicked="Clear_Clicked" />
+
+                <Button Grid.Row="1" Grid.Column="3"  Grid.RowSpan="2" Text="Total" BackgroundColor="DarkGreen" FontSize="Default" Clicked="Total" x:Name="total"/>
+                <Button Grid.Row="3" Grid.Column="3"  Grid.RowSpan="2" Text="Buy" BackgroundColor="Blue" TextColor="White" FontSize="Default" Clicked="Buy" />
+                <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" Text="Quantity: " BackgroundColor="#3478c9" Padding="7" HorizontalOptions="Center" TextColor="White" />
+                <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Text="" BackgroundColor="#3478c9" Padding="7" HorizontalOptions="Center" TextColor="White" x:Name="number"/>
+
+
+            </Grid>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" BackgroundColor="AntiqueWhite">
+            <ListView x:Name="mylist"  HasUnevenRows="false" HeightRequest="400" ItemSelected="mylist_ItemSelected" 
+                      RelativeLayout.HeightConstraint="{
+                ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.3}"
+                      
+                      RelativeLayout.WidthConstraint="{
+                ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ImageCell Text="{Binding name}" Detail="{Binding number}" ImageSource="{Binding image}" TextColor="Black" DetailColor="Aqua"/>-->
+
+                        <ViewCell >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding name}" Padding="8" HorizontalOptions="FillAndExpand" />
+                                <Label Text="{Binding quantity}" HorizontalOptions="EndAndExpand" Padding="8" />
+                            </StackLayout>
+                        </ViewCell>
+
+                        <!--<TextCell Text="{Binding name}" Detail="{Binding quantity}" TextColor="Black" DetailColor="Aqua">
+                            <TextCell.ContextActions>
+                                
+                                <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Delete" IsDestructive="True"  CommandParameter="{Binding .}" Clicked="Delete_Clicked"/>
+                            </TextCell.ContextActions>
+                        </TextCell>-->
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+        </StackLayout> 
+        
+        </StackLayout>
+
+</ContentPage>
