@@ -17,6 +17,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>                    
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="Type: " Padding="7" BackgroundColor="#3478c9" HorizontalOptions="Center" TextColor="White"/>
@@ -35,7 +36,7 @@
                 <Button Grid.Row="4" Grid.Column="2" Text="Clear" FontSize="10" TextColor="DarkRed" BackgroundColor="#fff" BorderRadius="10" Clicked="Clear_Clicked" />
 
                 <Button Grid.Row="1" Grid.Column="3"  Grid.RowSpan="2" Text="Total" BackgroundColor="DarkGreen" FontSize="Default" Clicked="Total" x:Name="total"/>
-                <Button Grid.Row="3" Grid.Column="3"  Grid.RowSpan="2" Text="Buy" BackgroundColor="Blue" TextColor="White" FontSize="Default" Clicked="Buy" />
+                <Button Grid.Row="3" Grid.Column="3"  Grid.RowSpan="2" Text="Buy" BackgroundColor="DarkGreen" TextColor="White" FontSize="Large" Clicked="Buy" />
                 <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" Text="Quantity: " BackgroundColor="#3478c9" Padding="7" HorizontalOptions="Center" TextColor="White" />
                 <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Text="" BackgroundColor="#3478c9" Padding="7" HorizontalOptions="Center" TextColor="White" x:Name="number"/>
 
